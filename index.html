@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Amazon Label</title>
+</head>
+<body>
+  <h2>📦 Amazon Label Trigger</h2>
+  <button onclick="trigger()">Download Now</button>
+
+  <script>
+    async function trigger() {
+      const res = await fetch("https://yourname.amazon-backend.repl.co/run", {
+        method: "POST"
+      });
+      const text = await res.text();
+      alert(text);
+    }
+  </script>
+</body>
+</html>
